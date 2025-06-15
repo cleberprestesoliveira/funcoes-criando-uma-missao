@@ -60,3 +60,14 @@ function mostraAlternativas() {
 }
 
 mostraPergunta();
+
+botao.addEventListener("click", () => respostaSelecionada(opcao));
+
+let historiaFinal = "";
+
+function respostaSelecionada(opcaoSelecionada) {
+  const afirmacoes = opcaoSelecionada.afirmacoes;
+  historiaFinal += afirmacoes + " ";
+  atual++;
+  mostraPergunta();
+}
